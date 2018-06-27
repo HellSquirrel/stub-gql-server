@@ -9,10 +9,10 @@ const resolvers = {};
 // Put together a schema
 const rootSchema = makeExecutableSchema({
   typeDefs: models,
-  resolvers: modelResolvers,
+  //resolvers: modelResolvers,
 });
 
-addMockFunctionsToSchema({schema});
+addMockFunctionsToSchema({schema: rootSchema});
 
 const app = express();
 app.use('/graphql', bodyParser.json(), graphqlExpress({schema: rootSchema}));
