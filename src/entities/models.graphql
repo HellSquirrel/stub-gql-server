@@ -3,30 +3,8 @@ type Query {
   product(id: ID!): Product
 }
 
-type Mutation {
-  saveChanges(input: SaveCahngesInput): Product
-}
-
 type Product {
   id: ID!
   title: String
-  picture: [Picture]
   amount: Int
-  statuses: [Status]
-}
-
-type Picture {
-  id: ID!
-  url: String!
-}
-
-type Status {
-  showcaseId: ID!
-  isLoading: Boolean
-  isPublished: Boolean
-}
-
-input SaveCahngesInput {
-  id: String!
-  showcases: [ID!]
 }
