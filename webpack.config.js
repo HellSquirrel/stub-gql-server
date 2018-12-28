@@ -27,7 +27,6 @@ module.exports = {
       },
       {
         test: /\.(graphql|gql)$/,
-        exclude: /node_modules/,
         use: {
           loader: 'raw-loader',
         },

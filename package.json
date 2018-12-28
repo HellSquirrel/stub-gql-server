@@ -7,7 +7,7 @@
     "start": "webpack --colors --progress",
     "test": "yarn test"
   },
-  "author": "",
+  "author": "HellSquirrel",
   "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^1.3.6",
