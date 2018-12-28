@@ -4,16 +4,20 @@ import {makeExecutableSchema, addMockFunctionsToSchema} from 'graphql-tools';
 import bodyParser from 'body-parser';
 import models from './entities/models.graphql';
 import modelResolvers from './entities/models.js';
+import cors from 'cors';
 const resolvers = {};
 
-// Put together a schema
 const rootSchema = makeExecutableSchema({
   typeDefs: models,
-  //resolvers: modelResolvers,
 });
 
 addMockFunctionsToSchema({schema: rootSchema});
 
 const app = express();
-app.use('/graphql', bodyParser.json(), graphqlExpress({schema: rootSchema}));
+app.use(
+  '/graphql',
+  bodyParser.json(),
+  cors(),
+  graphqlExpress({schema: rootSchema})
+);
 export default app;

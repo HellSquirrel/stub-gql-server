@@ -17,6 +17,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
